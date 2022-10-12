@@ -109,6 +109,10 @@ namespace classi
         {
             return produttore;
         }
+        public bool getStato()
+        {
+            return stato;
+        }
         public string getModello()
         {
             return modello;

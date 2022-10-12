@@ -31,8 +31,8 @@ namespace classi
                 }
             else
             {
-                int canale = Convert.ToInt32(numericUpDown1);
-                int volume = Convert.ToInt32(numericUpDown2);
+                int canale = Convert.ToInt32(numericUpDown1.Value);
+                int volume = Convert.ToInt32(numericUpDown2.Value);
                 Telecomando pop = new Telecomando(textBox1.Text, textBox2.Text, comboBox1.Text,false,canale, volume);
                 FactoryTelecomando.setInstance(pop);
                 this.Hide();
@@ -40,6 +40,16 @@ namespace classi
                 passa.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

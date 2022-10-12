@@ -60,7 +60,7 @@ namespace classi
         private void button3_Click(object sender, EventArgs e)
         {
             tele.inverti();
-            int vol = tele.getCanale();
+            bool vol = tele.getStato();
             string volu =Convert.ToString(vol);
             MessageBox.Show(volu);
             
