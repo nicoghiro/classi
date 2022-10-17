@@ -44,6 +44,14 @@ namespace classi
             tv=tvl;
             
         }
+        public Telecomando(string produttorel, string modellol, string funzionamentol)
+        {
+            produttore = produttorel;
+            modello = modellol;
+            funzionamento = funzionamentol;
+          
+
+        }
         public void inverti()
         {
             if (tv != null) { 
