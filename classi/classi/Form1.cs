@@ -13,10 +13,17 @@ namespace classi
     public partial class Form1 : Form
     {
         Telecomando tele=  FactoryTelecomando.getInstance();
+       
+        Televisore tv1 = new Televisore(false, "sansunsg", "tv1", true, 1080, 10, 10);
+        Televisore tv2 = new Televisore(false, "sony", "tv2", true, 1080, 10, 10);
+        Televisore  tv3 = new Televisore(false, "lg", "tv3", true, 1080, 10, 10);
+        
         public Form1()
         {
             InitializeComponent();
-           
+            
+            
+
 
         }
 
@@ -64,6 +71,31 @@ namespace classi
             string volu =Convert.ToString(vol);
             MessageBox.Show(volu);
             
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "nessuno")
+            {
+                tele.setTv(null);
+            }
+            if (comboBox2.Text == "tv1")
+            {
+                tele.setTv(tv1);
+            }
+            if (comboBox2.Text == "tv2")
+            {
+                tele.setTv(tv2);
+            }
+            if (comboBox2.Text == "tv3")
+            {
+                tele.setTv(tv3);
+            }
         }
     }
 }

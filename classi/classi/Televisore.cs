@@ -35,7 +35,7 @@ namespace classi
         private int risoluzione;
         private int canale;//canale attualmente selezionato  
         private int volume;
-        public Televisore(bool statol, string produttorel, string modellol, string[] portel, bool sorgentel, int risoluzionel, int canalel, int volumel)
+        public Televisore(bool statol, string produttorel, string modellol,  bool sorgentel, int risoluzionel, int canalel, int volumel)
         {
             if (volume <= 100 && volume >= 0 && canale <= 999 && canale >= 0)
             {
@@ -61,7 +61,7 @@ namespace classi
             }
             produttore = produttorel;
             modello = modellol;
-            porte = portel;
+            
             sorgente = sorgentel;
             stato = statol;
             risoluzione = risoluzionel;
@@ -90,9 +90,9 @@ namespace classi
         {
             stato = nuovostato;
         }
-        private void SetCanale(int canale)
+        private void SetCanale(int canalel)
         {
-            canale = canale;
+            canale = canalel;
         }
         private void SetSorgente(bool sorgenti)
         {
