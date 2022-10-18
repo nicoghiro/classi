@@ -28,50 +28,22 @@ namespace classi
         private string produttore;
         private string modello;
         private string funzionamento;
-        private bool stato;
-        private int canale;
-        private int volume;
-        public Telecomando(string produttorel, string modellol, string funzionamentol, bool statol, int canalel, int volumel)
-        {
-            if (volume <= 100 && volume >= 0 && canale <= 999 && canale >= 0)
-            {
-
-                canale = canalel;
-                volume = volumel;
-            }
-            else
-            {
-                if (volume > 100 || volume < 0)
-                {
-                    volume = 50;
-                    throw new Exception("volume inserito non valido , è stato settato a 50");
-
-                    
-                }
-                else
-                {
-                    canale = 999;
-                    throw new Exception("canale inserito non valido , è stato settato a 999");
-                    
-                }
-            }
-     
-            produttore = produttorel;
-            modello = modellol;
-            funzionamento = funzionamentol;
-            stato = statol;   }
+        private Televisore tv;
+        
+       
 
 
 
 
         
 
-        public Telecomando(string produttorel, string modellol, string funzionamentol) { 
+        public Telecomando(string produttorel, string modellol, string funzionamentol,Televisore tvl) { 
             produttore=produttorel;
             modello=modellol;
             funzionamento=funzionamentol;
+            tv=tvl;
+            
         }
-<<<<<<< HEAD
         public Telecomando(string produttorel, string modellol, string funzionamentol)
         {
             produttore = produttorel;
@@ -81,53 +53,87 @@ namespace classi
 
         }
         public void inverti()
-=======
-        public void inverti ()
->>>>>>> parent of e45c0c3 (Merge branch 'main' of https://github.com/nicoghiro/domotica)
         {
-            stato =! stato;
+            if (tv != null) { 
+            tv.inverti();
+            }
         }
         public void aumentavolume ()
         {
-            if (volume != 100){
-            volume++; 
+            if (tv != null)
+            {
+                tv.aumentavolume();
             }
         }
         public void diminuiscivolume()
         {
-            if(volume != 0) { 
-            volume--;
-            }
+            if(tv != null) { 
+            tv.diminuiscivolume();}
         }
         public void cambiaCanale(int nuovocanale)
         {
-            canale = nuovocanale;
+            if (tv != null)
+            {
+                tv.cambiaCanale(nuovocanale);
+            }
         }
         public void aumentaCanale()
         {
-            if (canale != 999)
+            if (tv != null)
             {
-                canale++;
+                tv.aumentaCanale();
             }
         }
         public void diminuisciCanale()
         {
-            if (canale != 999)
+            if (tv != null)
             {
-                canale--;
+                tv.diminuisciCanale();
+            
             }
         }
         public string getProduttore()
         {
-            return produttore;
+            string ris;
+            if (tv != null)
+            { 
+               ris= tv.getProduttore();
+                return ris;
+            }
+            else
+            {
+                ris = "";
+                return ris; 
+            }
         }
         public bool getStato()
         {
-            return stato;
+            bool ris;
+            if (tv != null)
+            {
+                ris = tv.getStato();
+                return ris;
+            }
+            else
+            {
+                ris = false ;
+                return ris;
+            }
+          
         }
         public string getModello()
         {
-            return modello;
+            string ris;
+            if (tv != null)
+            {
+                ris = tv.getModello();
+                return ris;
+            }
+            else
+            {
+                ris = "";
+                return ris;
+            }
         }
         public string getFunzionamento()
         {
@@ -135,10 +141,31 @@ namespace classi
         }
         public int getCanale()
         {
-            return canale;
+            int ris;
+            if (tv != null)
+            {
+                 ris = tv.getCanale();
+                return ris;
+            }
+            else
+            {
+                ris = 0;
+                return ris;
+            }
         }
         public int getVolume()
-        { return volume; 
+        {
+            int ris;
+            if (tv != null)
+            {
+                ris = tv.getVolume();
+                return ris;
+            }
+            else
+            {
+                ris = -1;
+                return ris;
+            }
         }
     }
 }
