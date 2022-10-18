@@ -70,6 +70,7 @@ namespace classi
             produttore=produttorel;
             modello=modellol;
             funzionamento=funzionamentol;
+<<<<<<< HEAD
         }
 <<<<<<< HEAD
         public Telecomando(string produttorel, string modellol, string funzionamentol)
@@ -82,6 +83,10 @@ namespace classi
         }
         public void inverti()
 =======
+        public void inverti ()
+>>>>>>> parent of e45c0c3 (Merge branch 'main' of https://github.com/nicoghiro/domotica)
+=======
+        }
         public void inverti ()
 >>>>>>> parent of e45c0c3 (Merge branch 'main' of https://github.com/nicoghiro/domotica)
         {
