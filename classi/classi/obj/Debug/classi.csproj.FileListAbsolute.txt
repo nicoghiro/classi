@@ -22,12 +22,3 @@ C:\Users\nicolas\Source\Repos\nicoghiro\classi\classi\classi\obj\Debug\classi.cs
 C:\Users\nicolas\Source\Repos\nicoghiro\classi\classi\classi\obj\Debug\classi.csproj.CoreCompileInputs.cache
 C:\Users\nicolas\Source\Repos\nicoghiro\classi\classi\classi\obj\Debug\classi.exe
 C:\Users\nicolas\Source\Repos\nicoghiro\classi\classi\classi\obj\Debug\classi.pdb
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.csproj.AssemblyReference.cache
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.csproj.SuggestedBindingRedirects.cache
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.Form1.resources
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.Form2.resources
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.Properties.Resources.resources
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.csproj.GenerateResource.cache
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.csproj.CoreCompileInputs.cache
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.exe
-C:\Users\Ghirardi.19370\Source\Repos\nicoghiro\domotica\classi\classi\obj\Debug\classi.pdb
