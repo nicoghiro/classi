@@ -8,25 +8,7 @@ namespace classi
 {
     public class Televisore
     {
-        public Televisore(string ilproduttore, string ilmodello)
-        {
-            produttore = ilproduttore;
-            modello = ilmodello;
-            stato = false;
-            porte = null;
-            sorgente = true;
-            risoluzione = 1080;
-            canale = 1;
-            volume = 0;
-
-
-        }
-
-        public Televisore()
-        {
-            produttore = "";
-            modello = "";
-        }
+        
         private bool stato;//accesa o spenta
         private string produttore;
         private string modello;
@@ -35,36 +17,60 @@ namespace classi
         private int risoluzione;
         private int canale;//canale attualmente selezionato  
         private int volume;
-        public Televisore(bool statol, string produttorel, string modellol,  bool sorgentel, int risoluzionel, int canalel, int volumel)
+          public Televisore(string ilproduttore, string ilmodello)
+        {
+            setProduttore(ilproduttore);
+            setModello(ilmodello);  
+            setStato(false);
+            setPorte(null);
+            setSorgente(true);
+            setRisoluzione(1080);
+            SetCanale(1);
+            setVolume(0);
+        }
+
+        public Televisore()
+        {
+            setProduttore("");
+            setModello("");  
+            setStato(false);
+            setPorte(null);
+            setSorgente(true);
+            setRisoluzione(1080);
+            SetCanale(1);
+            setVolume(0);
+        }
+        public Televisore(bool statol, string produttorel, string modellol,string[] portel  ,bool sorgentel, int risoluzionel, int canalel, int volumel)
         {
             if (volume <= 100 && volume >= 0 && canale <= 999 && canale >= 0)
             {
-
-                canale = canalel;
-                volume = volumel;
+                SetCanale(canalel);
+                setVolume(volumel);
+              
             }
             else
             {
                 if (volume > 100 || volume < 0)
                 {
-                    volume = 50;
+                    setVolume(50);
                     throw new Exception("volume inserito non valido , è stato settato a 50");
 
 
                 }
                 else
                 {
-                    canale = 999;
+                    SetCanale(1);
                     throw new Exception("canale inserito non valido , è stato settato a 999");
 
                 }
             }
-            produttore = produttorel;
-            modello = modellol;
+            setProduttore(produttorel);
+            setModello(modellol);
+            setPorte(portel);
+            setSorgente(sorgentel);
+            setStato(statol);
+            setRisoluzione(risoluzionel);
             
-            sorgente = sorgentel;
-            stato = statol;
-            risoluzione = risoluzionel;
         }
         public void accendi()
         {
@@ -74,18 +80,35 @@ namespace classi
         {
             stato = !stato;
         }
+        public void setProduttore(string profuttoret)
+        {
+           produttore=profuttoret;
+        }
         public void setRisoluzione(int risoluzionet)
         {
             risoluzione = risoluzionet;
+        }
+           public void setVolume(int volumet)
+        {
+            volume=volumet;
+        }
+          public void setModello(string modellot)
+        {
+            modello = modellot;
+        }
+        public void setPorte(string[] portet)
+        {
+            porte = portet;
+        }
+          public void setSorgente(bool sorgentet)
+        {
+            sorgente=sorgentet; 
         }
         public void spegni()
         {
             setStato(false);
         }
-        private void setPorte(string[] portet)
-        {
-            porte = portet;
-        }
+        
         private void setStato(bool nuovostato)
         {
             stato = nuovostato;

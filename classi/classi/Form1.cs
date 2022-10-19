@@ -23,9 +23,13 @@ namespace classi
         public Form1()
         {
             InitializeComponent();
-        tv1 = new Televisore(false, "sansunsg", "tv1", true, 1080, 10, 10);
-        tv2 = new Televisore(false, "sony", "tv2", true, 1080, 10, 10);
-        tv3 = new Televisore(false, "lg", "tv3", true, 1080, 10, 10);
+
+            string[] porte =new string[3]; 
+            porte[0] = "hdmi";
+            porte[1] = "usb";
+        tv1 = new Televisore(false, "sansunsg", "tv1",porte, true, 1080, 10, 10);
+        tv2 = new Televisore(false, "sony", "tv2", porte,true, 1080, 10, 10);
+        tv3 = new Televisore(false, "lg", "tv3",porte, true, 1080, 10, 10);
             
 
 
