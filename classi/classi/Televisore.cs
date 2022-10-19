@@ -124,16 +124,27 @@ namespace classi
         }
         public void aumentavolume()
         {
-            if (volume != 100)
+            if (volume != 100 && stato==true)
             {
                 volume++;
+            }
+            else
+            {
+                if (stato = !true)
+                {
+                    throw new Exception("la televisione deve essere prima accesa");
+                }
             }
         }
         public void diminuiscivolume()
         {
-            if (volume != 0)
+            if (volume != 0 && stato == true)
             {
                 volume--;
+            }
+            if (stato = !true)
+            {
+                throw new Exception("la televisione deve essere prima accesa");
             }
         }
         public void cambiaCanale(int nuovocanale)
@@ -142,16 +153,25 @@ namespace classi
         }
         public void aumentaCanale()
         {
-            if (canale != 999)
+
+            if (canale != 999&& stato==true)
             {
                 canale++;
+            }
+            if (stato = !true)
+            {
+                throw new Exception("la televisione deve essere prima accesa");
             }
         }
         public void diminuisciCanale()
         {
-            if (canale != 999)
+            if (canale != 999 && stato==true)
             {
                 canale--;
+            }
+            if (stato = !true)
+            {
+                throw new Exception("la televisione deve essere prima accesa");
             }
         }
         public string getProduttore()

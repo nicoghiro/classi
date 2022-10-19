@@ -39,23 +39,36 @@ namespace classi
 
         public Telecomando(string produttorel, string modellol, string funzionamentol, Televisore tvl)
         {
-            produttore = produttorel;
-            modello = modellol;
-            funzionamento = funzionamentol;
-            tv = tvl;
+            setProduttore(produttorel);
+            setModello(modellol);
+            setFunzionamento(funzionamentol);
+            setTv(tvl);
+            
 
         }
         public Telecomando(string produttorel, string modellol, string funzionamentol)
         {
-            produttore = produttorel;
-            modello = modellol;
-            funzionamento = funzionamentol;
-            
+            setProduttore(produttorel);
+            setModello(modellol);
+            setFunzionamento(funzionamentol);
+
 
         }
         public void setTv(Televisore tl)
         {
             tv= tl;
+        }
+        public void setProduttore(string profuttoret)
+        {
+            produttore = profuttoret;
+        }
+        public void setModello(string modellot)
+        {
+            modello = modellot;
+        }
+        public void setFunzionamento(string funzionamentot)
+        {
+            funzionamento = funzionamentot;
         }
         public void inverti()
         {
@@ -102,17 +115,7 @@ namespace classi
         }
         public string getProduttore()
         {
-            string ris;
-            if (tv != null)
-            {
-                ris = tv.getProduttore();
-                return ris;
-            }
-            else
-            {
-                ris = "";
-                return ris;
-            }
+            return produttore;
         }
         public bool getStato()
         {
@@ -131,17 +134,11 @@ namespace classi
         }
         public string getModello()
         {
-            string ris;
-            if (tv != null)
-            {
-                ris = tv.getModello();
-                return ris;
-            }
-            else
-            {
-                ris = "";
-                return ris;
-            }
+           return modello;
+        }
+        public Televisore getTV()
+        {
+            return tv;
         }
         public string getFunzionamento()
         {
