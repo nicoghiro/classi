@@ -13,15 +13,19 @@ namespace classi
     public partial class Form1 : Form
     {
         Telecomando tele=  FactoryTelecomando.getInstance();
+        Televisore tv1;
+        Televisore tv2;
+        Televisore  tv3;
+            
        
-        Televisore tv1 = new Televisore(false, "sansunsg", "tv1", true, 1080, 10, 10);
-        Televisore tv2 = new Televisore(false, "sony", "tv2", true, 1080, 10, 10);
-        Televisore  tv3 = new Televisore(false, "lg", "tv3", true, 1080, 10, 10);
+     
         
         public Form1()
         {
             InitializeComponent();
-            
+        tv1 = new Televisore(false, "sansunsg", "tv1", true, 1080, 10, 10);
+        tv2 = new Televisore(false, "sony", "tv2", true, 1080, 10, 10);
+        tv3 = new Televisore(false, "lg", "tv3", true, 1080, 10, 10);
             
 
 
