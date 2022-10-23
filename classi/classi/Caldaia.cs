@@ -59,7 +59,7 @@ namespace classi
             setStato(false);
         }
 
-        private void setStato(bool nuovostato)
+        public void setStato(bool nuovostato)
         {
             stato = nuovostato;
         }
@@ -82,6 +82,20 @@ namespace classi
             if (stato == true)
             {
                 temperatura = tempe;
+            }
+        }
+        public void aumeTemparatura()
+        {
+            if (stato == true)
+            {
+                temperatura++;
+            }
+        }
+        public void dimiTemparatura()
+        {
+            if (stato == true)
+            {
+                temperatura--;
             }
         }
         public string getProduttore()
