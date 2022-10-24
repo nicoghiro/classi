@@ -142,7 +142,7 @@ namespace classi
             {
                 volume--;
             }
-            if (stato = !true)
+            if (stato != true)
             {
                 throw new Exception("la televisione deve essere prima accesa");
             }
@@ -158,7 +158,7 @@ namespace classi
             {
                 canale++;
             }
-            if (stato = !true)
+            if (stato != true)
             {
                 throw new Exception("la televisione deve essere prima accesa");
             }
@@ -169,7 +169,7 @@ namespace classi
             {
                 canale--;
             }
-            if (stato = !true)
+            if (stato != true)
             {
                 throw new Exception("la televisione deve essere prima accesa");
             }
