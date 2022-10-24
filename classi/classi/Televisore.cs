@@ -130,7 +130,7 @@ namespace classi
             }
             else
             {
-                if (stato = !true)
+                if (stato != true)
                 {
                     throw new Exception("la televisione deve essere prima accesa");
                 }
